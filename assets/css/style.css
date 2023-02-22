@@ -83,6 +83,10 @@ a {
     min-height: 100vh;
 }
 
+.menu-spacing {
+    height: 65px;
+}
+
 /*  Menu (header)  */
 .menu {
     position: fixed;
@@ -138,3 +142,18 @@ a {
      width: 50%;
      left: 25%;
  }
+
+ /*  Section 1  */
+
+.intro-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+    height: 100vh;
+}
+
+.intro-text-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
