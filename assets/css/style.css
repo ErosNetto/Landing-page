@@ -11,6 +11,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -126,6 +127,11 @@ tfoot td, table th {
     height: 65px;
 }
 
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
 /*  Menu (header)  */
 .menu {
     position: fixed;
@@ -135,39 +141,39 @@ tfoot td, table th {
     width: 100%;
     z-index: 1;
     border-bottom: 0.1rem solid var(--light-gray-color);
- }
+}
  
- .menu-content {
+.menu-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 0;
     padding-bottom: 0;
- }
+}
  
- .menu h1 {
+.menu h1 {
     font-size: 2.3rem;
     color: var(--primary-color);
- }
+}
  
- .menu h1 a {
+.menu h1 a {
     color: inherit;
- }
+}
  
- .menu ul {
+.menu ul {
     list-style: none;
     display: flex;
- }
+}
  
- .menu ul li a{
+.menu ul li a{
     display: block;
     padding: 2rem;
     font-size: 1.8rem;
     color: var(--primary-color);
     position: relative;
- }
+}
  
- .menu ul li a::after {
+.menu ul li a::after {
     content: '';
     position: absolute;
     bottom: 1rem;
@@ -176,18 +182,17 @@ tfoot td, table th {
     height: 0.2rem;
     background: var(--secondary-color);
     transition: all 300ms ease-in-out;
- }
+}
  
- .menu ul li a:hover::after {
+.menu ul li a:hover::after {
     width: 50%;
     left: 25%;
- }
+}
 
- /*  Section 1  */
-
+/*  Section 1  */
 .intro-content {
     position: relative;
-    top: -8rem;
+    /* top: -8rem; */
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: var(--gap);
@@ -275,8 +280,77 @@ tfoot td, table th {
     transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
 }
 
-/*  Section 6  */
+/*  Section 7  */
+.contact-form {
+    grid-column: span 2;
+}
 
-.responsive-table {
+.contact-form .form-grid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
 
+.form-grid legend {
+    font-style: italic;
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
+
+.form-group {
+    flex: 1 1 320px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    border: none;
+    background: var(--white-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 3rem;
+    outline: none;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    box-shadow: 0 0 10px 2px var(--secondary-color);
+}
+
+.form-group button {
+    border: 0.5rem solid var(--white-color);
+    background: none;
+    color: var(--white-color);
+    padding: 1.5rem 2rem;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+    background: var(--white-color);
+    color: var(--primary-color);
+}
+
+.form-group ::placeholder {
+    color: var(--light-gray-color);
+}
+
+/*  Footer  */
+.footer {
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+.footer a {
+    color: #444;
+}
+
+.footer p {
+    margin: 0;
+    padding: 3rem;
 }
