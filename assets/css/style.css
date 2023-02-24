@@ -218,7 +218,7 @@ body .full-width {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
 }
 
@@ -353,4 +353,27 @@ body .full-width {
 .footer p {
     margin: 0;
     padding: 3rem;
+}
+
+/*  Media Queries (Responsividade) */
+
+/*  Section 1, Section 3  */
+@media (max-width: 800px) {
+    .intro-content, .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .gallery-img img {
+        width: 100%;
+    }
+
+    .grid-one-content {
+        display: block;
+    }
 }
